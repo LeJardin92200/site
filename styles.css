@@ -1,0 +1,708 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header.hero-section {
+    background: url('images/lejardin.png') no-repeat center center;
+    opacity: 0.6;
+    background-size: contain; /* Affiche l'image entière en ajustant la taille tout en conservant les proportions */
+    height: 100vh; /* Hauteur du viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    background-color: black; /* Optionnel : ajoute une couleur de fond pour les zones vides */
+    background-attachment: fixed;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.8); /* Ombre au texte */
+    font-size: 3em; /* Vous pouvez ajuster la taille selon vos besoins */
+}
+
+
+header .hero-content h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+header .hero-content p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    background-color: #333;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #B22222;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #990000;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+h2 {
+    color: #B22222;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.menu-section, .menu-du-jour-section, .boissons-section, .vins-section, .rhum-section, .gallery-section {
+    margin-bottom: 40px;
+}
+
+.menu-encart, .rhum-encart, .contact-encart {
+    background-color: white;
+    border: 4px solid #B22222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.menu-encart .menu-item, .boissons-category, .rhum-encart ul, .menu-encart ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-encart .menu-item h3, .boissons-category h3, .rhum-encart p {
+    color: #B22222;
+    margin-bottom: 10px;
+}
+
+.menu-encart ul li, .boissons-category ul li, .rhum-encart ul li {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.gallery-section .gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-form label {
+    align-self: flex-start;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 30px;
+    background-color: #B22222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #8B0000;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.gallery-section {
+    margin: 40px 0;
+}
+
+.gallery-section h2, .gallery-category h3 {
+    text-align: center;
+    color: #B22222;
+}
+
+.gallery-category {
+    margin-bottom: 40px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 250px; /* Limite la largeur maximale des images */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-section .intro-text {
+    text-align: center; /* Centre le texte horizontalement */
+    margin: 0 auto; /* Assure un espacement automatique de gauche et de droite pour le centrage dans les conteneurs */
+    max-width: 800px; /* Définit une largeur maximale pour éviter que le texte ne s'étende trop sur de grands écrans */
+}
+
+.rhum-encart ul {
+    list-style-type: none; /* Retire les puces de la liste */
+    padding: 0; /* Retire le padding par défaut */
+}
+
+.rhum-encart li {
+    margin-bottom: 10px; /* Espace entre les éléments de la liste */
+    font-size: 16px; /* Ajuste la taille de la police */
+    display: flex; /* Utilise le flexbox pour aligner les icônes avec le texte */
+    align-items: center; /* Aligne verticalement les éléments */
+}
+
+.spicy-indicator {
+    display: inline-flex; /* Affiche les icônes en ligne avec le texte */
+    align-items: center; /* Aligne verticalement les icônes */
+    margin-left: 10px; /* Espace entre le texte et les icônes */
+}
+
+.spicy-icon {
+    width: 16px; /* Taille des icônes de piment */
+    height: auto; /* Maintient les proportions des icônes */
+    margin-left: 2px; /* Espace entre les icônes */
+}
+
+.menu-item img, .boissons-category img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.menu-section, .vins-section {
+    background-color: #f9f9f9; /* Couleur de fond légère */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée légère */
+}
+
+.menu-item, .boissons-category {
+    border-bottom: 1px solid #ddd; /* Bordure entre les sections */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-item:last-child, .boissons-category:last-child {
+    border-bottom: none; /* Pas de bordure pour le dernier élément */
+}
+
+.menu-item h3, .boissons-category h3 {
+    color: #333; /* Couleur des titres */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.menu-item ul, .boissons-category ul {
+    list-style: none; /* Supprimer les puces */
+    padding: 0;
+}
+
+.menu-item li, .boissons-category li {
+    background-color: #fff; /* Fond blanc pour les éléments */
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.menu-item li:last-child, .boissons-category li:last-child {
+    margin-bottom: 0; /* Pas de marge pour le dernier élément */
+}
+
+.menu-options {
+    padding: 10px;
+    background-color: #e0e0e0; /* Fond léger */
+    border-radius: 8px;
+    text-align: center;
+}
+
+.menu-options p {
+    font-size: 1.2em;
+    margin: 0;
+    color: #333;
+}
+
+.menu-options strong {
+
+    color: #e67e22; /* Couleur d’accentuation */
+}
+
+.info-section {
+    background-color: #f5f5f5; /* Couleur de fond légère */
+    padding: 10px;
+    margin: 20px 0;
+    border-top: 1px solid #ddd; /* Bordure supérieure */
+    text-align: center;
+}
+
+.info-section p {
+    font-size: 0.9em; /* Taille de police réduite */
+    color: #666; /* Couleur de texte discrète */
+    margin: 5px 0; /* Marges pour espacer les paragraphes */
+}
+
+.menu-du-jour-section {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the flex containers */
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center items within the flex container */
+    align-items: center;
+    text-align: center;
+    gap: 20px; /* Add some space between the two menus */
+}
+
+/* === Lightbox (galerie) === */
+a[data-lightbox] {
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* === Responsive (mobile et tablette) === */
+@media (max-width: 768px) {
+  header.hero-section {
+    height: 60vh;
+    background-size: cover;
+    font-size: 1.5em;
+  }
+
+  header .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  header .hero-content p {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .container {
+    width: 90%;
+    padding: 20px 0;
+  }
+
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery img {
+    max-width: 90%;
+  }
+
+  .container-flex {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.photo-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.photo-card img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+.photo-card .caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px;
+  font-size: 1rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.photo-card:hover .caption {
+  opacity: 1;
+}
+
+.fullscreen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    cursor: pointer;
+}
+
+.fullscreen-overlay.visible {
+    opacity: 1;
+}
+
+.fullscreen-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.7);
+    transition: transform 0.3s ease;
+}
+
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+nav ul li a, .menu-options p {
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --bordeaux: #B22222;
+  --beige: #ece8e2;
+  --sauge: #e5eae1;
+  --gris-foncé: #333;
+  --blanc: #ffffff;
+} 
+
+body {
+  background-color: var(--beige);
+  color: var(--gris-foncé);
+}
+
+.menu-encart, .rhum-encart, .contact-encart {
+  background-color: var(--blanc);
+  border: 4px solid var(--bordeaux);
+}
+
+nav {
+  background-color: var(--bordeaux);
+}
+
+.event-inline-banner.important {
+  background: linear-gradient(to right, #5384aa, #9caf88);
+  color: white;
+  padding: 8px 16px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.5px;
+  animation: slideInBanner 0.8s ease-out;
+  border-bottom: 2px solid #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+@keyframes slideInBanner {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.bienvenue-modern {
+  max-width: 720px;
+  margin: 80px auto;
+  padding: 30px 24px;
+  background-color: #fff;
+  border: 2px solid var(--bordeaux);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  font-family: 'Lato', sans-serif;
+  color: #2f2f2f;
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+.bienvenue-modern h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: var(--bordeaux);
+  margin-bottom: 24px;
+}
+
+.sceau-fait-maison {
+  display: inline-block;
+  font-size: 0.8rem;
+  background-color: #f5f1ee;
+  color: var(--bordeaux);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.bienvenue-modern .cta-modern {
+  font-weight: bold;
+  color: var(--bordeaux);
+  margin-top: 30px;
+  font-size: 1rem;
+}
+
+.footer {
+  background-color: var(--bordeaux);
+  color: #fdfdfd;
+  padding: 40px 20px 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-col {
+  flex: 1 1 240px;
+  min-width: 200px;
+}
+
+.footer h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer h4 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffe9e9;
+}
+
+.footer a {
+  color: #ffe9e9;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 6px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.footer-social {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #fdfdfd;
+}
+
+.footer-social span {
+  margin-right: 10px;
+  font-weight: 500;
+  color: #ffe9e9;
+  letter-spacing: 0.3px;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 6px;
+  color: #ffe9e9;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.footer-social i {
+  vertical-align: middle;
+}
+
+.avis-badge {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.avis-badge .avis {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 16px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #ffe9e9;
+}
+
+.avis-badge .avis i {
+  font-size: 1.2rem;
+}
+
+.avis-badge .avis a {
+  color: #ffe9e9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.avis-badge .avis a:hover {
+  text-decoration: underline;
+}
+
+.avis-badge .google i {
+  color: #fbbc05;
+}
+
+.avis-badge .tripadvisor i {
+  color: #34e0a1;
+}
+
+.language-switcher {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    gap: 10px;
+}
+
+.language-switcher img {
+    width: 36px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.language-switcher img:hover {
+    transform: scale(1.1);
+}
