@@ -790,3 +790,16 @@ header.hero-section {
 }
 
 
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0,0,0,0.5)),
+                url('images/lejardin.png') no-repeat center center;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+}
+
+
